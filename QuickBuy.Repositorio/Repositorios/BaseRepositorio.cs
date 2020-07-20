@@ -6,6 +6,10 @@ namespace QuickBuy.Repositorio.Repositorios
 {
     public class BaseRepositorio<TEntity> : IBaseRepositorio<TEntity> where TEntity : class
     {
+        public BaseRepositorio()
+        {
+
+        }
         public void Adicionar(TEntity entity)
         {
             throw new NotImplementedException();
