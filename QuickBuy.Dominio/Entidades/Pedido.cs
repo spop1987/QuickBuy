@@ -30,13 +30,14 @@ namespace QuickBuy.Dominio.Entidades
         {
             LimparMensagensValidacao();
             if (ItensPedido.Any())
-            {
                 AdicionarCritica("Crítica: Item de Pedido no puede ser vacío");
-            }
+            
+
             if(string.IsNullOrEmpty(CEP))
-            {
                 AdicionarCritica("Crítica: Llenar el campo CEP");
-            }
+
+            if (FormaPagamentoId == 0)
+                AdicionarCritica("Crítica: No fue informado la forma de pagamento");
         }
     }
 }
