@@ -29,7 +29,7 @@ namespace QuickBuy.Dominio.Entidades
         public override void Validate()
         {
             LimparMensagensValidacao();
-            if (ItensPedido.Any())
+            if (!ItensPedido.Any())
                 AdicionarCritica("Crítica: Item de Pedido no puede ser vacío");
             
 
